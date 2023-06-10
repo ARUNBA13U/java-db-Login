@@ -59,14 +59,14 @@
       alternatives:
         name: python
         link: /usr/bin/python3.11
-        path: /usr/bin/python3
+        path: /usr/bin/python3.11
       tags: python-alternatives
 
 - name: Play 4 - Python library install and copying of War file
   hosts: webservers
   become: yes
   vars:
-    ansible_python_interpreter: /usr/bin/python
+    ansible_python_interpreter: /usr/bin/python3.11
   tasks:
     - name: Install boto3 and botocore with pip3 module
       pip:
