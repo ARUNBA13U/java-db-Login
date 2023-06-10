@@ -78,12 +78,12 @@
           - boto
           - boto3
           - botocore
-        executable: pip3
+        executable: pip3.9
       tags: boto-lib-install
 
     - name: copy the war file
       aws_s3:
-        bucket: lwplabs
+        bucket: jenkinsbuckkets
         object: login##1.0.war
         dest: /etc/tomcat/webapps/login##1.0.war
         mode: get
