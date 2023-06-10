@@ -66,7 +66,7 @@
   hosts: webservers
   become: yes
   vars:
-    ansible_python_interpreter: /usr/bin/python3.11
+    ansible_python_interpreter: /usr/bin/python
   tasks:
     - name: Install boto3 and botocore with pip3 module
       pip:
