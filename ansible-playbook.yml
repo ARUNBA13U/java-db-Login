@@ -69,7 +69,7 @@
     ansible_python_interpreter: /usr/bin/python
   tasks:
     - name: install pip3
-     apt: name=python3-pip state=present
+      apt: name=python3-pip state=present
     - name: Install boto3 and botocore with pip3 module
       pip:
         name:
