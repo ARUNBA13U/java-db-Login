@@ -59,7 +59,7 @@
       alternatives:
         name: python
         link: /usr/bin/python3.11
-        path: /usr/bin/python3.11
+        path: /usr/bin/python3
       tags: python-alternatives
 
 - name: Play 4 - Python library install and copying of War file
