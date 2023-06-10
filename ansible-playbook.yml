@@ -51,14 +51,14 @@
   tasks:
     - name: Install Python
       yum:
-        name: python3.11
+        name: python3.9
         state: present
       tags: python-install
 
     - name: alternatives
       alternatives:
         name: python
-        link: /usr/bin/python3.11
+        link: /usr/bin/python3.9
         path: /usr/bin/python3
       tags: python-alternatives
 
@@ -66,7 +66,7 @@
   hosts: webservers
   become: yes
   vars:
-    ansible_python_interpreter: /usr/bin/python3.11
+    ansible_python_interpreter: /usr/bin/python
   tasks:
     - name: Install boto3 and botocore with pip3 module
       pip:
@@ -74,7 +74,7 @@
           - boto
           - boto3
           - botocore
-        executable: pip3.11
+        executable: pip3.9
       tags: boto-lib-install
 
     - name: copy the war file
