@@ -51,14 +51,14 @@
   tasks:
     - name: Install Python
       yum:
-        name: python3.6
+        name: python3.9
         state: present
       tags: python-install
 
     - name: alternatives
       alternatives:
         name: python
-        link: /usr/bin/python3.6
+        link: /usr/bin/python3.9
         path: /usr/bin/python3
       tags: python-alternatives
 
@@ -74,7 +74,7 @@
           - boto
           - boto3
           - botocore
-        executable: pip3.6
+        executable: pip3.9
       tags: boto-lib-install
 
     - name: copy the war file
