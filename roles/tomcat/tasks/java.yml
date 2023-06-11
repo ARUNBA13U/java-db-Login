@@ -1,5 +1,5 @@
 - name: "Install Java"
   yum:
-   name: 'java*'
+   name: 'java'
    state: present
 
